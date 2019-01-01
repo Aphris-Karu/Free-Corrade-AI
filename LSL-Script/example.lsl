@@ -8,7 +8,6 @@ string PASSWORD = "";
 string MQTT_HOST = "";
 list seperator = ["ȵ"];
 
-
 // This is the holder for the CORRADE callback address
 string callback = "";
 
@@ -166,21 +165,14 @@ state MQTT_AI {
                     "command", "MQTT",
                     "group", wasURLEscape(GROUP),
                     "password", wasURLEscape(PASSWORD),
-                    // Subscribe to Corrade AI
                     "action", "subscribe",
-                    // Corrade AI listening host.
-                    "host", "192.168.1.222",
-                    // Corrade AI listening port.
+                    "host", MQTT_HOST,
                     "port", 1883,
-                    // Corrade AI credentials.
                     "username", "corrade",
                     "secret", "corrade",
-                    // Use the SIML module of Corrade AI.
                     "topic", "ai/output",
                     "id", "c0e367f2-20f1-4c32-a723-3d4bd3795ca3",
-                    // Send the result of the MQTT command to this URL.
                     "callback", wasURLEscape(callback),
-                    // By adding an URL, Corrade will subscribe AND bind to the "MQTT" notification.
                     "URL", wasURLEscape(callback)
                 ]
             )
@@ -240,7 +232,21 @@ state reply {
 
             if ( private == 1) 
             {
-                llMessageLinked(LINK_THIS, 0, "Tellȵ"+(string)CORRADE+"ȵ"+(string)WhoAsked+"ȵ"+Message+"ȵ"+callback, ""); 
+                llInstantMessage(CORRADE,
+                  wasKeyValueEncode(
+                  [
+                      // send a start-typing message to an avatar
+                      "command", "tell",
+                      "group", wasURLEscape(GROUP),
+                      "password", wasURLEscape(PASSWORD),
+                      "agent", WhoAsked,
+                      "entity", "avatar",
+                      "dialog", "MessageFromAgent",
+                      "message", Message, 
+                      "callback", callback
+                 ]
+               )
+             );
                  return;
             }
         }
