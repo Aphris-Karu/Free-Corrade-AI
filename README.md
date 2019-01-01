@@ -10,7 +10,7 @@ It is based on Rivescript and written using the Perl RiveScript Plugin.
 
 The bot accepts a call that is
 
-PRIVATE=#&AGENT=<agent uuid>&DATA=<message>
+PRIVATE=#&AGENT=\<agent uuid\>&DATA=\<message\>
 
 PRIVATE is a variable I use to determine if the message is for private chat, local chat, group chat, or group notice. That is processing in the LSL script.
 
