@@ -1,9 +1,9 @@
 /*
     Basic bot setup
 */
-key CORRADE = "77dcf61c-6003-4458-a109-e1b83a4e5bba" ;
-string GROUP = "Cybers Place";
-string PASSWORD = "rrttyy";
+key CORRADE = "" ;
+string GROUP = "";
+string PASSWORD = "";
 list seperator = ["ȵ"];
 
 // This is the holder for the CORRADE callback address
