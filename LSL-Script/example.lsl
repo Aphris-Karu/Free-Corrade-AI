@@ -8,6 +8,7 @@ list seperator = ["ȵ"];
 
 // This is the holder for the CORRADE callback address
 string callback = "";
+
 integer private = 1; //Set the speach responce to public or private
 
 
@@ -212,8 +213,6 @@ state reply {
     }
     http_request(key id, string method, string body) {
         llHTTPResponse(id, 200, "OK");
-         llOwnerSay("HTTP Recieved");
-         llOwnerSay("HTTP Body: "+body);
         string Message;
         string MessageBody = llToLower(wasURLUnescape( wasKeyValueGet("message", body) ));
         string orgMessageBody = wasURLUnescape( wasKeyValueGet("message", body) );
@@ -221,7 +220,6 @@ state reply {
         string WhoAsked = wasURLUnescape( wasKeyValueGet("agent", body));
     if( MSGType == "MQTT") {
             // Get the sent message.
-            llOwnerSay("MQTT Recieved");
             string data = wasURLUnescape(wasKeyValueGet("payload", body));
             string msgid = wasURLUnescape(wasKeyValueGet("id", body));
             if ( msgid == "c0e367f2-20f1-4c32-a723-3d4bd3795ca3" ) 
@@ -253,9 +251,32 @@ state reply {
           string username=llKey2Name(WhoAsked);
           MessageBody = username+": "+MessageBody;
           private = 1;
-          llOwnerSay("Sending to MQTT");
-          llMessageLinked(LINK_THIS, 0, "MQTTȵ"+(string)CORRADE+"ȵ"+WhoAsked+"ȵ"+(string)private+"ȵ"+MessageBody+"ȵ"+callback, ""); 
-        }
+          llInstantMessage(CORRADE,
+            wasKeyValueEncode(
+                [
+                    "command", "MQTT",
+                    "group", wasURLEscape(GROUP),
+                    "password", wasURLEscape(PASSWORD),
+                    "action", "publish",
+                    "host", MQTT_HOST,
+                    "port", 1883,
+                    "username", "corrade",
+                    "secret", "corrade",
+                    "topic", "ai/input",
+                    "payload", wasURLEscape(
+                        wasKeyValueEncode(
+                            [
+                                "PRIVATE", private,
+                                "UUID", WhoAsked,
+                                "Message", ToSend
+                            ]
+                        )
+                    ),
+                    "callback", wasURLEscape(callback)
+                ]
+            )
+        );
+       }
     }
 }
 
