@@ -5,15 +5,15 @@ It is based on Rivescript and written using the Perl RiveScript Plugin.
 * /brain contains the rivescripts for the brain
 * /lists contain list of data that the brain can use.
 * bot-ai.pl is the main perl brain
-* Makefile will creat a docker file and push it to the regestry of your choice
+* Makefile will create a docker file and push it to the registry of your choice
 * Dockerfile is the Docker build file to build the perl container.
 
 The bot expects communications to be in the same format as SL communications. Thus
-it sould he
+it should he
 
 SLFIRST SLLAST: Message
 
-Thus all Rive script entries sould start with
+Thus all Rive script entries should start with
 
 \+ _ [*]
 
@@ -23,13 +23,13 @@ Where the first _ is the users name and the [*] is there as old accounts will ha
 ## Docker
 
 The docker container will take the environment variable of "MQTT_SERVER" to set the MQTT server that it communicates to
-/usr/src/app/brain containe the Rive script files and should be copied to an excessable storage location so you can edit them.
+/usr/src/app/brain contains the Rive script files and should be copied to an accessible storage location so you can edit them.
 
 The DBD::DBI and DBD:Pg modules are installed for Postresql access. For future expansion.
 
 ## Running as a docker container
 
-you will need to edit the Makefile and set the REGISTRY variable to your registry. After which you can use make to build and push a docker conainer for the bot-ai.
+you will need to edit the Makefile and set the REGISTRY variable to your registry. After which you can use make to build and push a docker container for the bot-ai.
 I have provided an example Docker-Stack.yaml file that brings up the bot, bot-ai, and mosquitto-mqtt server. You will have to edit it to match your environment and replace \<botname\> with the name of your bot. 
 
 ## Running stand alone
@@ -52,5 +52,4 @@ To start you will need to set the variables in about-bot.rive to the information
 RiveScript can be extended with objects which can be in perl, Java, or python. The objects.rive file contain a couple of examples of perl objects which search flat files.
 
 The brain provided is rather simple and is a base to start building your own personalized brain from. It is missing a lot and I myself am still working on expanding it.
-
 
