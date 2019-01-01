@@ -1,10 +1,13 @@
 /*
     Basic bot setup
+    Fill in with your bots info
 */
 key CORRADE = "" ;
 string GROUP = "";
 string PASSWORD = "";
+string MQTT_HOST = "";
 list seperator = ["ȵ"];
+
 
 // This is the holder for the CORRADE callback address
 string callback = "";
@@ -268,7 +271,7 @@ state reply {
                             [
                                 "PRIVATE", private,
                                 "UUID", WhoAsked,
-                                "Message", ToSend
+                                "Message", MessageBody
                             ]
                         )
                     ),
@@ -279,4 +282,3 @@ state reply {
        }
     }
 }
-
