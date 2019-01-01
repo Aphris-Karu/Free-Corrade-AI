@@ -1,4 +1,6 @@
 # This is the new AI for Corrade 
+Note: this is an early beta version that I am still working on!
+
 
 It is based on Rivescript and written using the Perl RiveScript Plugin.
 
