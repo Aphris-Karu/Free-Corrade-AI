@@ -13,16 +13,16 @@ services:
       volumes:
         - mosquitto-data:/mosquitto/data
      
-    kellyai:
-      image: 192.168.1.222:5000/kellyai:latest
+    <botname>:
+      image: 192.168.1.222:5000/<botname>:latest
       networks:
          - AI-Bot
          - traefik_default
       deploy:
          labels:
-           - "traefik.backend=kellyai"
+           - "traefik.backend=<botname>"
            - "traefik.docker.network=traefik_default"
-           - "traefik.frontend.rule=Host:kellyai.docker.xganon.com"
+           - "traefik.frontend.rule=Host:<botname>.docker.xganon.com"
            - "traefik.port=54377"
            - "traefik.enable=true"        
       entrypoint: /usr/bin/mono-service -l\:Corrade.exe.lock --no-daemon Corrade.exe

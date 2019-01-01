@@ -2,7 +2,7 @@
 use Net::MQTT::Simple;
 use RiveScript;
 my $Version = "2.3";
-my $MQTT=$ENV{'MQTT_SERVER'} || "docker1";
+my $MQTT=$ENV{'MQTT_SERVER'} || "mqtt";
  
 # Create a new RiveScript interpreter.
 my $rs = new RiveScript;

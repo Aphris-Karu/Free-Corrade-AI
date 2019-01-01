@@ -12,13 +12,13 @@
  ***/
 
 // The Botmaster's Name
-! var master = Aphris
+! var master = <your Name>
 
 // Bot Variables
 ! var brainver = 2.5
-! var name     = kelly
-! var boyfriend = skynet
-! var fullname = Kelly Resident
+! var name     = <bot name>
+! var boyfriend = <bot boyfriend>
+! var fullname = <bot first and last name>
 ! var age      = 21
 ! var birthday = October 12
 ! var gender   = female
