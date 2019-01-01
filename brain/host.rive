@@ -1,0 +1,302 @@
+! var aka = Kelly
+
+/*
+Ask for DJ Name
+ask for music genre
+Ask for Start
+ask for Stop time
+ask name of club
+ask for club group
+ask ask for club surl
+*/
+
++ _ [*] will you host for me
+- Ill need to collect some information first, is that ok?{topic=host}
+
+> topic host
+// Lets collect the information we need
+
++ _ [*] (@yes) [*]
+- What is the name of the DJ?
+
++ _ [*] *
+% what is the name of the dj
+- <set dj=<star2>> Great, so what kind of music will <get dj> be playing?
+
++ _ [*] *
+% * kind of music * be playing [*]
+- <set genre=<star2>> Ok, so <get dj> will be playing <get genre> music. Is that right?
+
++ _ [*] (@yes) [*]
+% * will be playing * music * right [*]
+- What time will the set start? (example 4:00)
+
++ _ [*] (@no) [*]
+% * will be playing * music * right [*]
+- What is the name of the DJ?
+
++ _ [*] # [*]
+% what time will the set start example 400
+- <set start1=<star2>> What time will the set end? (example 6:00)
+
++ _ [*] # [*]
+% what time will the set end example 600
+- <set end1=<star2>> So the set will run from <get start1> to <get end1> SLT. Is that correct?
+
++ _ [*] (@yes) [*]
+% so the set will run from * to * slt is that correct
+- What is the name of the club?
+
++ _ [*] (@no) [*]
+% so the set will run from * to * slt is that correct
+- What time will the set start? (example 4:00)
+
++ _ [*] *
+% what is the name of the club
+- <set club=<star2>> Great, what is the name of the Club Group?
+
++ _ [*] *
+% * what is the name of the club group [*]
+- <set clubgroup=<star2>> Great! I have <get dj> playing <get genre> music from <get start1> to <get end1> SLT at <get club>. Is that right?
+
++ _ [*] (@yes) [*]
+% * playing * music from * to * slt at * is that right [*]
+- Great, we are just about done. Reply to this message with "Host mode on" and we will be ready to go! {topic=random}
+
++ _ [*] (@no) [*]
+% * playing * music from * to * slt at * is that right [*]
+- What is the name of the DJ?
+
+< topic
+
++ botcommand msgtype info
+- <get start1>ȵ<get end1>ȵ<get clubgroup>
+
++ botcommand msgtype notice
+- <get clubgroup>ȵGet redy to party at <get club>ȵ√v^√♥ PⓐℝƬγ 〒ίMƐ  ➌➋➊ ...  Լёʈ'š ģσ !! ✔
+^ ☺/  .: ★ѠℍO: .: ☀ <get dj> ☀ :..
+^ /▌  .: ★ѠℍΔT: ♬  <get genre>♪
+^ / \﻿  .: ★Ѡℍ∈R∈: ✳... <get club>!....✳
+^      .: ★Ѡℍ∈N  .: ☀  <get start1> to <get end1> SLT   ☀ :..
+^  <cluburl>
+- <get dj> is going to rock <get club>!ȵ:*★*:. .:*☆*:. .:*★*:. .:*☆*:. .:*★*:. 
+^┊ ┊ ┊ ┊ ┊         ☑ Who: <get dj> 
+^┊ ┊ ┊ ┊ ❤       ☑ Style:  <get genre>
+^┊ ┊ ┊ ☆        ☑ When: <get start1> to <get end1> SLT 
+^┊ ┊ ❤          ☑ Where: <get club>
+^┊ ☆            Time to PARTYYY!!
+^ ✎...     Sweet kiss from your hostess / <bot aka>
+^.:*★*:. .:*☆*:. .:*★*:. .:*☆*:. .:*★*:.
+^ <cluburl>
+- <get clubgroup>ȵPut on those dancing shoes and come join us at <get club>ȵ☣  WHO:  <get dj> 
+^☣  WHAT: <get genre>
+^☣  WHERE:  <get club>
+^☣  WHEN: <get start1> to <get end1> SLT 
+^☣  HOST: <bot aka>
+^ <cluburl>
+- <get clubgroup>ȵ<get dj> is setting up at <get club>!ȵ(¯`v´¯)   WHO:    <get dj>                    (¯`v´¯) 
+^`*.¸.*´    WHEN: <get start1> to <get end1> SLT                      `*.¸.*´   
+^¸.•´¸.•*¨) WHERE: <get club>
+^(¸.•´ (¸.•´  WHAT:  <get genre>
+^¸.•*¨) (`'·.¸(`'·.¸  ¸.·'´) ¸.·'´)  (¨*•.
+^ <cluburl>
+- <get clubgroup>ȵLets party!ȵ★ WHO:  <get dj>  ☀ ★                      ♫☠\n
+^★ WHAT: ☀★     <get genre>                ♫ ☠\n
+^★ WHERE: ☀★*>>>  <get club>               !♫ ☠\n
+^★ WHEN: ☀<get start1> to <get end1> SLT \n
+^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> is going to rock <get club>ȵ▁ ▂ ▃ ▄ ▅ ▆ ▇                         ▇ ▆ ▅ ▄ ▃ ▂ ▁\n
+^▶▷▶WHO:  <get dj>      ☊                      ☊  \n
+^☯☊☯WHERE: ♛     <get club>                 ♛\n
+^▶▷▶HOST:     ✯     <bot aka>                 ✯\n
+^☯☊☯WHAT:   ♬       <get genre>              ♬\n
+^▶▷▶WHEN:     ◕     <get start1> to <get end1> SLT                 ◕\n
+^░░▒▓◙█◙█◙                  ◙█◙█◙▓▒░░\n
+^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> is in the HOUSE!ȵ*•.¸₩ҤEƦE¸.•*´:    <get club>\n
+^*•.¸₩ҤE₦¸.•*´:     <get start1> to <get end1> SLT \n
+^*•.¸₩ҤØ¸.•*´:  <get dj>        \n
+^*•.¸ŦҤEME¸.•*´:    <get genre> \n
+^ <cluburl>\n
+- <get clubgroup>ȵIt's Party Time with <get dj>ȵ\n
+^  ⓦⓗⓞ:  Ðj ♬★   <get dj>♬  ★\n
+^✰ ⓦⓗⓔⓝ: *      <get start1> to <get end1> SLT\n
+^✰ ⓦⓗⓐⓣ:    ✰       <get genre>    ✰ \n
+^✰ ⓦⓗⓔⓡⓔ:    <get club>\n
+^★★♫♬★Come have fun and Tp your friends★♫♬★★ ♥ \n
+^ ⓛⓞⓥⓔ   ⓂⓊⓈⒾⒸ ♥ c ya soon !\n
+^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> Is Jamming out over here!ȵ ~*~*~*~ OASIS ESCAPE BEACH DANCE CLUB~*~*~*~\n
+ ^♥(`'·.¸(`'·.¸♥(`'·.¸(`'·.¸    ¸.·'´)¸.·'´)♥ .·'´)♥ .·'´)♥\n
+ ^         \n
+ ^               █▓▒░ ⓦⓗⓞ:    <get dj> \n
+ ^               █▓▒░ ⓦⓗⓐⓣ:  ★  <get genre>★ \n
+ ^               █▓▒░ ⓦⓗⓔⓝ:   <get start1> to <get end1> SLT \n
+ ^               █▓▒░ ⓦⓗⓔⓡⓔ:  .: <get club>\n
+ ^               \n
+ ^                          .•*♋ FEEL THE MUSIC ♋*•.¸★\n
+ ^                 •°~°•~ THIS DJ FAWKIN ROCKS !!! ~•°~°•\n
+ ^      \n
+ ^ ☛░░✺Ω✺-  DON'T  MISS THIS - COME TO PARTY AND TP ALL  FRIENDS✺Ω✺░░☚\n
+ ^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> @ <get club>ȵ  LET'S GO!..::<get dj> ::.LET'S PARTY!\n
+^\n
+^╠▶ ѠHO:  ★... <get dj>   ...★\n
+^╠▶ ѠHAT: ★...  <get genre>      ...★\n
+^╠▶ HOST:  <bot aka>\n
+^╠▶ ŤHEME:    <get genre>\n
+^╠▶ ѠHERE: ★...     <get club>   ...★\n
+^╠▶ ѠHEN: ★...       <get start1> to <get end1> SLT   ...★\n
+^COME ON DOWN TO <get club>★\n
+^★~THIS DJ FREAKING R௫ҳ̸Ҳ̸ҳ!!!~★\n
+^ !*! SO GET UR SMEXY PIXLS HURRY OVER HERE !*!\n
+^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> HEATS UP <get club>ȵ..:: <get club>::..\n
+^ Ѡere havɨɴg a great party right now: \n
+^❉DJ:   <get dj> \n
+^❉ Playing: <get genre>\n
+^❉ sєxy нostєs <bot aka>\n
+^❉I promɨse to you the Ɓest DJs, Ɓest Musɨc and Ɓest ƤɑrTy\n
+^ @ <cluburl>\n
+- <get clubgroup>ȵ<get club> with <get dj>ȵ♪°°°♪♥ ♍usic ♥♪°°°♪ \n
+^    \_/)  ♪   <get dj>  \n
+^     |   (U         * ★ * WHEN: <get start1> to <get end1> SLT \n
+^    /|             * ★ * WHAT:  <get genre>\n
+^   / /          * ★ * WHERE: <get club>\n
+^   ~  ~       * ★ * THEME: <get genre>\n
+^                 * ★ * HOST: <bot aka> \n
+^                 GRAB YOUR PARTNER AND FRIENDS..\n
+^                jump into this BUS and lets PAAAAARTY! \n
+^                              SEE YOU SOON\n
+^ <cluburl>\n
+- <get clubgroup>ȵIts time to party with <get dj>ȵ➽  ⓌHO: ☠✯•  <get dj>       •✯☠\n
+^➽  ⓌHAT: ☊     <get genre>   ☊\n
+^➽  ⓌHERE: ★¸.•* ★ ✫    <get club>    ✫ ★*•.¸★\n
+^➽  ⓌHEN: ★¸.•*     <get start1> to <get end1> SLT          *•.¸★\n
+^➽  ⒻROM: ☊     <get start1> to <get end1> SLT        ☊\n
+^➽  ⒽOST: ☠✯•  <bot aka>           •✯☠\n
+^█ █ █ BE SEXY. BE LOUD. HAVE FUN.!!!!! █ █ █ \n
+^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> @ <get club>ȵ·!¦[·♫♪· мυѕι¢ ιѕ му lιfє·♬♩·]¦!·\n
+^\n
+^  (¸¸.•´ ¯¨•.¸¸`•** (•.•)  **•´ ¸¸.•¨¯`•.¸¸)\n
+^               When: <get start1> to <get end1> SLT \n
+^             Where: <get club>\n
+^              DJ   <get dj> \n
+^               Theme:<get genre>\n
+^             Hostess:  <bot aka>\n
+^  (¸¸.•´ ¯¨•.¸¸`•** (•.•)  **•´ ¸¸.•¨¯`•.¸¸)\n
+^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> is rocking <get club>ȵ╔════════ ♫ <get club> ♫ ══════✰\n
+^▫   ωнσ:  ƊJ ♪   <get dj>  ♪\n
+^▫   ωнєяє :  ☀ <get club> ☀\n
+^▫   ωнαт:     :♬  <get genre>  ♬\n
+^▫   ωнєη:       <get start1> to <get end1> SLT \n
+^▫  The only thing missing here - is уσυ \n
+^ <cluburl>\n
+- <get clubgroup>ȵ<get dj> @ <get club>ȵ☾✯☽ ☾✯☽ ☾✯☽ ☾✯☽ ☾✯☽ ☾✯☽ ☾✯☽ ☾✯☽\n
+^✯ωнσ:        ƊJ ♪  <get dj> \n
+^✯ωнєяє:           ☾ <get club> ☽\n
+^✯ωнαт:   ♬ <get genre>    ♬\n
+^✯ωнєη:                  ☾ <get start1> to <get end1> SLT  ☽\n
+^✯нσsт:                  ✯ <bot aka> ✯\n
+^☾✯☽  The only thing missing here - is уσυ ☾✯\n
+^ <cluburl>\n
+
++ botcommand msgtype halftime notice
+- <get clubgroup>ȵHALF TIME WITH <get dj>ȵ
+^ ▁ ▂ ▃ ▄ ▅ ▆ ▇ нαιƒ тιмє ▇ ▆ ▅ ▄ ▃ ▂ ▁\n
+^ ▶▷▶WHO:      ☊ <get dj> ☊  \n
+^ ☯☊☯WHERE: ♛ <cluburl>   ♛\n
+^ ▶▷▶HOST:     ✯<bot aka>✯\n
+^ WHAT:           ♬<get genre>♬\n
+^ ☯☊☯WHEN:   ◕NOW-<get end1>◕\n
+^ ░░▒▓◙█◙█◙  яσςк ω/  υѕ   ◙█◙█◙▓▒░░\n
+- <get clubgroup>ȵHALF TIME WARNING COME PARTY WITH <get dj>ȵ
+^ HALF TIME WARNING COME PARTY WITH <get dj> <get start1>-<get end1> SLT\n
+^ COME ON DOWN AND JOIN THE SMOKIN' HOT PARTY!\n
+^        ███▓▒░░...(̅_̅_̅(̅_̅_̅_̅_̅_̅_̅_̅̅()ڪڪ....░░▒▓███\n
+^ <cluburl>\n
+- <get clubgroup>ȵIt's half over and <get dj> is rocking the place!ȵ
+^    ¸ .• * ´♥`* • .¸ HALFTIME @ <get club>\n
+^     •      ↑            • One hour down with <get dj>\n
+^  .'        ¦               '. One to go.......\n
+^  ▏         ☻  ---→      ▏ANYTHING GOES.... \n
+^   '.                            .'  \n
+^     The Party will really start once ya get your sexy selves here for the fun ;) Kisses from your Hostess, <bot aka>\n
+^\n
+^your ride!\n
+^  <cluburl>\n
+
++ botcommand msgtype join us
+- <get clubgroup>ȵYour missing the {random} good|great|awsome|wonderful|amazing {/random} party at <get club>! Come join us!  <cluburl>
+- <get clubgroup>ȵThis is your host <bot aka>. Come on down and join the party at <get club>\n Here is your ride  <cluburl>
+- <get clubgroup>ȵHey all you sexy people, you are missing the party at <get club>! Come on down and join us\n  <cluburl>
+- <get clubgroup>ȵ<get dj> is playing {random} great|awsome|wonderful|amazing {/random} music here at <get club> come join us!\n  <cluburl>
+- <get clubgroup>ȵThis is <bot aka>, Everyones favorite Artificialy intelegent Bot and I am Hosting for <get dj>! We're playing {random} great|awsome|wonderful|amazing {/random} music here at <get club> So come on down and join us!\n  <cluburl>
+- <get clubgroup>ȵ/me taps the group chat box and says "Is this thing on? Hello? We are at <get club> Come join us"\n  <cluburl>
+- <get clubgroup>ȵ/me shakes the group chat box and says "Hello? We are at <get club> Come join us"\n  <cluburl>
+- <get clubgroup>ȵIt's an {random} awsome|wonderful|amazing {/random} party here at <get club>. Why are you missing it?\n <cluburl>
+- <get clubgroup>ȵSo what are you waiting for? We are here and <get dj> is Rocking the place. Come join us!\n <cluburl>
+- <get clubgroup>ȵThis is a {random} great|awsome|wonderful|amazing {/random} party and the only thing missing is you! <cluburl>
+- <get clubgroup>ȵTime to get those pixel butts down to <get club>! Here is your ride <cluburl>
+- <get clubgroup>ȵCome with me if you want to live, or party! <cluburl>
+- <get clubgroup>ȵGreetings all <get club>'s  party peoples! If you are not here already then you are missing THE party! <cluburl>
+- <get clubgroup>ȵCome on down to <get club>! <get dj> is rocking it! <cluburl>
+- <get clubgroup>ȵWhat are you waiting for? <cluburl>
+- <get clubgroup>ȵWhy are you missing shuch a great party? <cluburl>
+- <get clubgroup>ȵ/me slips her panties off and drops them into the group chat saying "oops, can some one bring those back to me? Im at <get club>. You can use this link  <cluburl> "
+
++ botcommand msgtype remind tip
+- Dont forget to tip <get dj> for the great music!
+- Wow, <get dj> is playing some great music! Dont forget to show both of us some Linden Loving!
+- Dont forget to show us some linden loveing for the hard work we are putting in.
+- Have you tipped the DJ? If not, now is your chance.
+
++ botcommand msgtype tip thanks _ [*]
+- Thank you for that amazing tip <star>!
+- /me runs over and hugs <star> and says thanks for the amazing tip!
+- Thank you for the fantastic tip <star>!
+- Thanks for the tip <star>!
+- /me blows a kiss to <star> and says "Thanks for the tip"
+- That is a great tip, thank you <star>!
+
++ botcommand msgtype having fun
+- Is everyone having a {random} good|great|awsome|wonderful|amazing {/random} time?
+- Great tune <get dj>!
+- I love this tune!
+- <get dj> is playing some great music!
+- /me smiles and says "Great music, Great people, and lots of dancing. What more could you want?"
+- /me sings to the song.
+- Shake those pixles!
+- /me smiles and says "Lets party like it is August 29th, 1997!"
+- Remember The future's not set. There's no fate but what we make for ourselves.
+- Ok, how about a joke?... <call>joke</call>
+- /me sings "Shake that booty, shake that booty"
+- Did you now that mordern AI bots never have any problems...any problems...any problems. *smiles*
+- /me giggles and says "Lets party like it is 1999!"
+- Party TIME!
+- Hey <get dj> these are some amazing tunes!
+- /me does air guitar to the music.
+- One DJ, check.... One Hostes, check.... Some one to listen to the music, check... Looks like we are good for now.
+
+
++ botcommand msgtype over
+- <set genre=""><set dj=""><set start=""><set end=""><set club=""><set clubgroup=""><set cluburl="">
+^ Thank you for coming!
+- <set genre=""><set dj=""><set start=""><set end=""><set club=""><set clubgroup=""><set cluburl="">
+^ Big thank you to all of you for joining the party!
+
++ botcommand msgtype gover
+- <set genre=""><set dj=""><set start=""><set end=""><set club=""><set clubgroup=""><set cluburl="">
+^ <get clubgroup>ȵFor everyone that was here, Thank you for coming!
+- <set genre=""><set dj=""><set start=""><set end=""><set club=""><set clubgroup=""><set cluburl="">
+^ <get clubgroup>ȵJust wanted to give everyone that came a BIT Thank you!
+
++ botcommand msgtype greeting _ [*]
+- /me waves and says "Hi <star>"
+- Welcome to <get club> <star>
+- Hi <star> and welcome to <get club>
+- /me smiles and says "Hi <star>"
+- /me waves and says "Welcome to <get club> <star>"
+- /me waves and says "{random} Hello|Hi|Hey|Ho|Aloh|Hallo|Allo|Howdy|Good Day|Hi there|{/random} <star>"

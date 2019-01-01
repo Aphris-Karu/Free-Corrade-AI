@@ -1,0 +1,106 @@
+> object database perl
+use DBI;
+my ($rs, $args) = @_;
+my $dbh;
+my $it = "";
+my @row_ary;
+my $string = $args;
+my $dbname = $ENV{'DBNAME'} || "kellyai";
+my $host = $ENV{'DBSRV'} || "docker6";
+my $port = $ENV{'DBPORT'} || "5432";
+my $username = $ENV{'DBUSER'} || "postgres";
+my $password = $ENV{'DBPASSWD'} || "rrttyy";
+
+$dbh = DBI->connect("dbi:Pg:dbname=$dbname;host=$host;port=$port",
+                    $username,
+                    $password,
+                    {AutoCommit => 0, RaiseError => 1, PrintError => 0}
+                   );
+my $sql = "SELECT (definition) FROM words WHERE word = \'$string\' ORDER BY random() LIMIT 1";
+@row_ary = $dbh->selectrow_array($sql);
+$it = $row_ary[0];
+if ( $it eq "" ) { return "not a word I know."; };
+if ( $it ne "" ) {
+chomp $it;
+my $rv = $dbh->disconnect;
+return $it;
+}
+< object
+
+> object joke perl
+srand;
+my $it;
+open FILE, "lists/jokes.txt" or die "Could not open filename: $!\n";
+rand($.) < 1 && ($it = $_) while <FILE>;
+close FILE;
+chomp $it;
+return $it;
+< object
+
+> object wisdom perl
+srand;
+my $it = "";
+open FILE, "lists/wisdom.txt" or die "Could not open filename: $!\n";
+rand($.) < 1 && ($it = $_) while <FILE>;
+close FILE;
+if ( $it eq "" ) { return "Nothing new"; };
+if ( $it ne "" ) {
+chomp $it;
+return $it;
+}
+< object
+
+> object capitol perl
+no warnings 'uninitialized';
+my $Capitol ="";
+my $state ="";
+my ($rs, $args) = @_;
+my $string = $args;
+open(F,"lists/capitols.txt");
+my @list=<F>;close F;
+my @f=grep (/$string:/i, @list);
+if ( $f[0] ne "" ) {($state, $Capitol)=split(":", $f[0]);}
+if ( $Capitol eq "" ) 
+{
+return "not something I know.";
+}else{
+chomp $Capitol;
+return $Capitol;
+}
+< object
+
+> object iq perl
+my $iq = `free | grep Mem: | awk '{print \$4}'`;
+chomp($iq);
+return $iq;
+< object
+
++ _ [*] what is your iq
+- Currently it is <call>iq</call> kb
+
++ _ [*] what does * mean
+- <star2> is <call>database <star2></call>
+
++ _ [*] * what * means
+- <star3> is <call>database <star3></call>
+
++ _ [*] * (define|definition of) _ [*]
+- hmmm <star4>  is... <call>database <star4></call>
+
++ _[*] * meaning of * [*]
+- <star3> is <call>database <star3></call>
+
++ _ [*] what * capitol of *
+- The Capitol of "<star3>" is <call>capitol <star3></call>.
+
++ _ [*] * a joke
+- <call>joke</call>
+
++ _ [*] what * (learn|learned) [*]
+- <call>wisdom</call>
+ 
++ _ [*] what is a _
+- <star2> is <call>database <star2></call>
+
++ _ [*] expansion rate * universe
+- /me smiles and says 74.3 kilometers per second.
