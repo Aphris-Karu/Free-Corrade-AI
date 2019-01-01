@@ -8,8 +8,18 @@ It is based on Rivescript and written using the Perl RiveScript Plugin.
 * Makefile will create a docker file and push it to the registry of your choice
 * Dockerfile is the Docker build file to build the perl container.
 
-The bot expects communications to be in the same format as SL communications. Thus
-it should he
+The bot accepts a call that is
+
+PRIVATE=#&AGENT=<agent uuid>&DATA=<message>
+
+PRIVATE is a variable I use to determine if the message is for private chat, local chat, group chat, or group notice. That is processing in the LSL script.
+
+AGENT is the agent UUID of the SL AV who typed the message
+
+MESSAGE is the message that was typed.
+
+The bot expects the message to be in the same format as SL communications. Thus
+it should be
 
 SLFIRST SLLAST: Message
 
