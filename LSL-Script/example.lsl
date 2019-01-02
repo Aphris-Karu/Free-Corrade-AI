@@ -257,8 +257,7 @@ state reply {
           string uname = wasURLUnescape( wasKeyValueGet("firstname", body));
           string lname = wasURLUnescape( wasKeyValueGet("lastname", body));
           MessageBody = llToLower(wasURLUnescape( wasKeyValueGet("message", body) )); 
-          string username=llKey2Name(WhoAsked);
-          MessageBody = username+": "+MessageBody;
+          MessageBody = uname+" "+lname+": "+MessageBody;
           private = 1;
           llInstantMessage(CORRADE,
             wasKeyValueEncode(
