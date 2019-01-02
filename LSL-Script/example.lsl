@@ -223,11 +223,13 @@ state reply {
             private = (integer)wasURLUnescape(wasKeyValueGet("PRIVATE", data));
             Message = wasURLUnescape(wasKeyValueGet("Message", data));
             //
+            // This is how I use the private variable within my scripts.
+            // 
             // If UUID == COMMAND and private == 4 then load var's
             // private == 0 public chat
             // private == 1 private chat
-            // if private == 2 then send group chat
-            // if private == 3 then send notice
+            // private == 2 then send group chat
+            // private == 3 then send notice
             //          
 
             if ( private == 1) 
