@@ -225,7 +225,7 @@ state reply {
             //
             // This is how I use the private variable within my scripts.
             // 
-            // If UUID == COMMAND and private == 4 then load var's
+            // If UUID == COMMAND and private == 4 then this is the AI sending a command to the bot.
             // private == 0 public chat
             // private == 1 private chat
             // private == 2 then send group chat
