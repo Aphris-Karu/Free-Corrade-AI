@@ -61,7 +61,9 @@ The brain is stored in the /brain directory and is a set of RiveScripts. See www
 
 To start you will need to set the variables in about-bot.rive to the information for your bot.
 
-RiveScript can be extended with objects which can be in perl, Java, or python. The objects.rive file contain a couple of examples of perl objects which search flat files.
+RiveScript can be extended with objects which can be in perl, Java, or python. The objects directory contains several  examples of perl objects I have written.
 
 The brain provided is rather simple and is a base to start building your own personalized brain from. It is missing a lot and I myself am still working on expanding it.
+
+The personality directory contains personalities I have avaliable.  
 
