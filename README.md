@@ -65,5 +65,5 @@ RiveScript can be extended with objects which can be in perl, Java, or python. T
 
 The brain provided is rather simple and is a base to start building your own personalized brain from. It is missing a lot and I myself am still working on expanding it.
 
-The personality directory contains personalities I have avaliable.  
+The personalities directory contains personalities I have avaliable.  
 
