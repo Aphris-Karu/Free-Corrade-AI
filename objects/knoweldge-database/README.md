@@ -2,15 +2,15 @@
 
 ### gives the bot the ability to learn new things that are stored in the database and to then look up that information.
 
-Place the knoweldge-database-object.rive in the brain directory
-Install the schema in a postgresql database.
+* Place the knoweldge-database-object.rive in the brain directory
+* Install the schema in a postgresql database.
 
 Uses the DB environment variables in the docker container for
-  DBNAME = name of the database
-  DBSRV = name of the server
-  DBPORT = port number
-  DBUSER = database user name
-  DBPASSWD = database user password
+*  DBNAME = name of the database
+*  DBSRV = name of the server
+*  DBPORT = port number
+*  DBUSER = database user name
+*  DBPASSWD = database user password
 
 Note: You can edit the rivescript and set defaults for the variables if you are running standalone.
 
