@@ -1,0 +1,16 @@
+> object wisdom perl
+srand;
+my $it = "";
+open FILE, "lists/wisdom.txt" or die "Could not open filename: $!\n";
+rand($.) < 1 && ($it = $_) while <FILE>;
+close FILE;
+if ( $it eq "" ) { return "Nothing new"; };
+if ( $it ne "" ) {
+chomp $it;
+return $it;
+}
+< object
+
++ _ [*] what * (learn|learned) [*]
+- <call>wisdom</call>
+ 

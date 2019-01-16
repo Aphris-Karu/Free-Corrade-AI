@@ -1,0 +1,22 @@
+> object capitol perl
+no warnings 'uninitialized';
+my $Capitol ="";
+my $state ="";
+my ($rs, $args) = @_;
+my $string = $args;
+open(F,"lists/capitols.txt");
+my @list=<F>;close F;
+my @f=grep (/$string:/i, @list);
+if ( $f[0] ne "" ) {($state, $Capitol)=split(":", $f[0]);}
+if ( $Capitol eq "" ) 
+{
+return "not something I know.";
+}else{
+chomp $Capitol;
+return $Capitol;
+}
+< object
+
++ _ [*] what * capitol of *
+- The Capitol of "<star3>" is <call>capitol <star3></call>.
+

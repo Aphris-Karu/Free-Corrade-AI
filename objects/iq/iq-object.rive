@@ -1,0 +1,8 @@
+> object iq perl
+my $iq = `free | grep Mem: | awk '{print \$4}'`;
+chomp($iq);
+return $iq;
+< object
+
++ _ [*] what is your iq
+- Currently it is <call>iq</call> kb

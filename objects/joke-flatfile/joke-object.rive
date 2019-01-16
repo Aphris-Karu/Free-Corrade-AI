@@ -1,0 +1,12 @@
+> object joke perl
+ srand;
+ my $it;
+ open FILE, "lists/jokes.txt" or die "Could not open filename: $!\n";
+  rand($.) < 1 && ($it = $_) while <FILE>;
+ close FILE;
+ chomp $it;
+ return $it;
+< object
+
++ _ [*] * a joke
+- <call>joke</call>

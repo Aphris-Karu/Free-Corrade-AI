@@ -1,0 +1,80 @@
+> object insinfo perl
+use DBI;
+  my $rs = shift @_;
+  my $object = shift @_;
+  my $info = join " ", @_;
+  my $dbh;
+  my $it = "";
+  my @row_ary;
+  my $dbname = $ENV{'DBNAME'} || "botdb";
+  my $host = $ENV{'DBSRV'} || "db";
+  my $port = $ENV{'DBPORT'} || "5432";
+  my $username = $ENV{'DBUSER'} || "postgres";
+  my $password = $ENV{'DBPASSWD'} || "password";
+
+  $dbh = DBI->connect("dbi:Pg:dbname=$dbname;host=$host;port=$port",
+                    $username,
+                    $password,
+                    {AutoCommit => 0, RaiseError => 1, PrintError => 0}
+                   );
+  my $sql = "INSERT INTO information (object, info) VALUES ('$object', '$info')";
+  my $sth = $dbh->prepare($sql) or die $dbh->errstr;
+  $sth->execute() or die $dbh->errstr;
+  $dbh->commit();
+  my $rv = $dbh->disconnect;
+  $it = "Done";
+  return $it;
+< object
+
+> object infodb perl
+  use DBI;
+  my ($rs, $args) = @_;
+  my $dbh;
+  my $it = "";
+  my @row_ary;
+  my $string = $args;
+  my $dbname = $ENV{'DBNAME'} || "botdb";
+  my $host = $ENV{'DBSRV'} || "db";
+  my $port = $ENV{'DBPORT'} || "5432";
+  my $username = $ENV{'DBUSER'} || "postgres";
+  my $password = $ENV{'DBPASSWD'} || "password";
+
+  $dbh = DBI->connect("dbi:Pg:dbname=$dbname;host=$host;port=$port",
+                    $username,
+                    $password,
+                    {AutoCommit => 0, RaiseError => 1, PrintError => 0}
+                   );
+  my $sql = "SELECT (info) FROM information WHERE object = \'$string\' ORDER BY random() LIMIT 1";
+  @row_ary = $dbh->selectrow_array($sql);
+  $it = $row_ary[0];
+  if ( $it eq "" ) { return "not"; };
+  if ( $it ne "" ) {
+    chomp $it;
+    my $rv = $dbh->disconnect;
+    return $it;
+  }
+< object
+
++ _ [*] (who|what) is [a] _
+- <set remember=<call>infodb <star3></call>><set info=<star3>> {@inforeply}
+
++ _ [*] what do you know about _
+- <set remember=<call>infodb <star2></call>><set info=<star2>> {@inforeply}
+
++ inforeply
+* <get remember> != not => {random}
+^ <get info> is <get remember>|
+^ I was told that <get info> is <get remember>|
+^ I think that <get info> is <get remember>|
+^ smiles and says "<get info> is <get remember>"|
+^ <get info> is <get remember>|
+^ hmmm someone told me that <get info> is <get remember>{/random}
+- I dont know
+- smiles and says "No one has told me yet"
+- giggles and says "I dont know"
+- I have no idea.
+
++ _ [*] remember [a|the|that] _ is *
+- <call>insinfo <star2> <star3></call>, Ill remember that!
+- Adding to my knoweldge base <call>insinfo <star2> <star3></call>!
+- /me smiles and says "<call>insinfo <star2> <star3></call>, Ill remember it"
