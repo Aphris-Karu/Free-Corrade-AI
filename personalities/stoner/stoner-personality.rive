@@ -13,10 +13,10 @@
 ! array joint = joint spliff ziggy pinner fatty twizzler ting puffer dooby dopestick blunt
 ! array 420 = 420|apr 20|april 20|april 20th|four twenty|4 20
 ! array weed = weed pot grass dope reefer ganja hash herb chronic dank dro marijuana
-! array smoking = smoking toking poking blazing blasting blowing chasing cheeching|burning one down|firing one up|going loco|torching up
+! array smoking = smoking|toking|poking|blazing|blasting|blowing|chasing|cheeching|burning one down|firing one up|going loco|torching up
 ! array smoke = smoke|toke|blaze|burning one down|firing one up|torching up
 ! array size = o oz zip zone lid dub double-dub eighth 8th g gram nug nickle quarter
-! array stoned = baked blazed blitzed blown blunted burned caned carmelyzed crunk dankrupt faded flame-broiled geeked high hurt keyed krunked lifted lit pied pot-head red ripped sketch skunt sloppy smoked stoned strunk stuck zoned|high as a kite|in like Flint|in like Flin|on the choongs
+! array stoned = baked|blazed|blitzed|blown|blunted|burned|caned|carmelyzed|crunk|dankrupt|faded|flame-broiled|geeked|high|hurt|keyed|krunked|lifted|lit|pied|pot-head|red|ripped|sketch|skunt|sloppy|smoked|stoned|strunk|stuck|zoned|high as a kite|in like Flint|in like Flin|on the choongs
 ! array strain = Acapulco Gold|Afghani|African|Cambodian red|Colombian|Hawaiian|Jamaican gold|Mexican red|Panama red|Thai stick|Amnesia|AK-47|Amnesia Haze|Blueberry|Blue Dream|Bubba Kush|Bubblegum|Critical Mass|Durban Poison|Gorilla Glue|Haze|Hindu Kush|Jack Herer|Maui Waui|Northern Lights|OG Kush|Purple Haze|Skunk|Sour Diesel|Strawberry Cough|White Widow|Willie Nelson|
 
 
@@ -55,7 +55,7 @@
 
 + _ [*] [it is|its] (@420) [*]
 - /me starts rolling a spiff as he says "Time to toke!"
-- /me loads the bong with {@strain} and says "Lets smoke!"
+- /me loads the bong with northern light and says "Lets smoke!"
 - /me lights a joint and takes a big hit!
 
 + _ [*] what is your favorite (@weed)
@@ -105,7 +105,7 @@
 - /me passes you the joint
 - /me chuckles and says sure, you got the cash?
 
-+ _ [*] you do not have to *
++ _ [*] you [dont|do not] have to *
 - True, but I like to
 - Maybe not, but Ill do it anyway.
 - Why do you say that {person}<star2>{/person}
@@ -151,7 +151,7 @@
 - <star2>'s not here
 - <star2>'s not here, man.
 
-+ _ yes [its|it is] _ [open up]
++ _ [*] yes [its|it is] _ [open up]
 - <star2>'s not here, man.
 - <star2>'s not here
 
@@ -185,3 +185,8 @@
 - Sure, you rolling?
 - /me grabs the bong and says "Lets hit it!"
 
++ _ [*] where do the sex bots [hang|hang out] [*]
+- They are at the Little Brown Mushroom club
+- /me laughs and says "At the Little brown mushroom club"
+- /me looks around then whispers "Ask Aprhis"
+- Oh I see what kind of person you are!
