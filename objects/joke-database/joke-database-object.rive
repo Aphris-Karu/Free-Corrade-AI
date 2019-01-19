@@ -1,0 +1,32 @@
+> object database perl
+  use DBI;
+  my ($rs, $args) = @_;
+  my $dbh;
+  my $it = "";
+  my @row_ary;
+  my $string = $args;
+  my $dbname = $ENV{'DBNAME'} || "botdb";
+  my $host = $ENV{'DBSRV'} || "db";
+  my $port = $ENV{'DBPORT'} || "5432";
+  my $username = $ENV{'DBUSER'} || "postgres";
+  my $password = $ENV{'DBPASSWD'} || "password";
+
+  $dbh = DBI->connect("dbi:Pg:dbname=$dbname;host=$host;port=$port",
+                    $username,
+                    $password,
+                    {AutoCommit => 0, RaiseError => 1, PrintError => 0}
+                   );
+  my $sql = "SELECT (joke) FROM jokes ORDER BY random() LIMIT 1";
+  @row_ary = $dbh->selectrow_array($sql);
+  $it = $row_ary[0];
+  if ( $it eq "" ) { return "I know that one."; };
+  if ( $it ne "" ) {
+    chomp $it;
+    my $rv = $dbh->disconnect;
+    return $it;
+  }
+< object
+
++ _ [*] * a [better] joke
+- <call>joke</call>
+
