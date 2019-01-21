@@ -1,11 +1,11 @@
 > object time perl
-  my $time = `TZ="America/Los_Angeles"; date +%r`;
+  my $time = `export TZ="America/Los_Angeles"; date +%r`;
   chomp($time);
   return $time;
 < object
 
 > object date perl
-  my $date = `TZ="America/Los_Angeles"; date +"%A %b %d %Y"`;
+  my $date = `export TZ="America/Los_Angeles"; date +"%A %b %d %Y"`;
   chomp($date);
   return $date;
 < object
