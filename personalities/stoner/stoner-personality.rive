@@ -243,8 +243,8 @@
 
 + _ [*] (@action) your boyfriends (@body)
 * <get girlfriend> == undefined => I dont have a boyfriend right now.
-- /me <star2>'s <get girlfriend> <star3>
+- /me <star2>'s <get boyfriend> <star3>
 
 + _ [*] (@action) your boyfriend
 * <get girlfriend> == undefined => I dont have a boyfriend right now.
-- /me <star2>'s <get girlfriend>
+- /me <star2>'s <get boyfriend>
