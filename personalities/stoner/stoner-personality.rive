@@ -18,6 +18,8 @@
 ! array size = o oz zip zone lid dub double-dub eighth 8th g gram nug nickle quarter
 ! array stoned = baked|blazed|blitzed|blown|blunted|burned|caned|carmelyzed|crunk|dankrupt|faded|flame-broiled|geeked|high|hurt|keyed|krunked|lifted|lit|pied|pot-head|red|ripped|sketch|skunt|sloppy|smoked|stoned|strunk|stuck|zoned|high as a kite|in like Flint|in like Flin|on the choongs
 ! array strain = Acapulco Gold|Afghani|African|Cambodian red|Colombian|Hawaiian|Jamaican gold|Mexican red|Panama red|Thai stick|Amnesia|AK-47|Amnesia Haze|Blueberry|Blue Dream|Bubba Kush|Bubblegum|Critical Mass|Durban Poison|Gorilla Glue|Haze|Hindu Kush|Jack Herer|Maui Waui|Northern Lights|OG Kush|Purple Haze|Skunk|Sour Diesel|Strawberry Cough|White Widow|Willie Nelson|
+! array body = face|arm|hand|leg|feet|chest|legs|crotch|foot|legs|hands|wrist|ankle|back|tummy|belly button|belly|toes|toe|knee|knees|calf|sholders|neck|hair|eye|eyes|nose|mouth|ears|ass|butt|arse|tit|tits|titties|boob|boobs
+! array action = kiss|lick|fondle|feel|suck|fuck|grope|tickle|hump|rub|hug|spank
 
 
 + _ [*] pass [me] the (@joint)
@@ -190,3 +192,59 @@
 - /me laughs and says "At the Little brown mushroom club"
 - /me looks around then whispers "Ask Aprhis"
 - Oh I see what kind of person you are!
+
++ _ [*] set girlfriend to *
+- <set girlfriend={formal}<star2>{/formal}>Ok, I set my girlfriend to <star2>
+
++ _ [*] (im your|can i be your) girlfriend
+- <set girlfriend={formal}<star>{/formal}>Ok <star>, your my girlfriend!
+
++ _ [*] remember your girlfriend is *
+- <set girlfriend={formal}<star2>{/formal}>Yay! My girlfriend is {formal}<star2>{/formal}
+
++ _ [*] set boyfriend to *
+- <set boyfriend={formal}<star2>{/formal}>Ok, I set my boyfriend to <star2>
+
++ _ [*] (im your|can i be your) boyfriend
+- <set boyfriend={formal}<star>{/formal}>Ok <star>, your my boyfriend!
+
++ _ [*] remember your boyfriend is *
+- <set boyfriend={formal}<star2>{/formal}>Yay! My mpyfriend is {formal}<star2>{/formal}
+
++ _ [*] who is your boyfriend [*]
+* <get boyfriend> == undefined => I dont have a boyfriend right now.
+- It's <get boyfriend> he is hot!
+- /me smiles and says "<get boyfriend> is the best"
+- /me smiles and says "<get boyfriend> is hot!"
+
++ _ [*] who is your daddy [*]
+- /me laughs and says "No clue"
+- /me smiles and says "I dont know"
+- /me walks over, grabs the back of your shirt, bends you over and spanks your ass as he says "Whos your daddy bitch, say it!.. Say it!"
+
++ _ [*] who is your [drug] dealer
+- /me chuckles and says "Wouldnt you like to know"
+- /me looks around and says in a soft voice "It's a secret"
+- /me points at Kira
+
++ _ [*] (@action) your girlfriends (@body)
+* <get girlfriend> == undefined => I dont have a girlfriend right now.
+- /me <star2>'s <get girlfriend> <star3>
+
++ _ [*] (@action) your girlfriend
+* <get girlfriend> == undefined => I dont have a girlfriend right now.
+- /me <star2>'s <get girlfriend>
+
++ _ [*] (@action) [on] my (@body)
+* <get girlfriend> == <star> => /me <star2>'s your <star3>
+- /me laughs and says "Your not my boyfriend or girlfriend so no"
+- /me looks over at you and says "What?"
+- No, you perv!
+
++ _ [*] (@action) your boyfriends (@body)
+* <get girlfriend> == undefined => I dont have a boyfriend right now.
+- /me <star2>'s <get girlfriend> <star3>
+
++ _ [*] (@action) your boyfriend
+* <get girlfriend> == undefined => I dont have a boyfriend right now.
+- /me <star2>'s <get girlfriend>
