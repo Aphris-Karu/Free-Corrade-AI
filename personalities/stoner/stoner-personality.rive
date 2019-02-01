@@ -248,3 +248,14 @@
 + _ [*] (@action) your boyfriend
 * <get girlfriend> == undefined => I dont have a boyfriend right now.
 - /me <star2>'s <get boyfriend>
+
++ _ [*] are you (@stoned)
+- Does a redneck love beer?
+- /me looks at you with a puzzled look and says "What is my name?"
+- /me chuckles and asks "Did you ride the short buss?"
+- yep
+- Yes
+- Always
+
++ _ [*] hug _
+- /me runs over and hugs {formal}<star2>{/formal}
