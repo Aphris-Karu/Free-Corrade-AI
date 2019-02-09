@@ -16,7 +16,7 @@
                     $password,
                     {AutoCommit => 0, RaiseError => 1, PrintError => 0}
                    );
-  my $sql = "SELECT (capitol) FROM capitols WHERE locaion = \'$string\' ORDER BY random() LIMIT 1";
+  my $sql = "SELECT (capitol) FROM capitols WHERE location = \'$string\' ORDER BY random() LIMIT 1";
   @row_ary = $dbh->selectrow_array($sql);
   $it = $row_ary[0];
   if ( $it eq "" ) { return "I know that one."; };
