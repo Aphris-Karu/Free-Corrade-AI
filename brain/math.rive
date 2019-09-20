@@ -1,0 +1,46 @@
+> object plus perl
+  my $rs = shift @_;
+  my $first = shift @_;
+  my $second = join " ", @_;
+  my $add = $first + $second;
+  return $add; 
+< object
+
+> object subtract perl
+  my $rs = shift @_;
+  my $first = shift @_;
+  my $second = join " ", @_;
+  my $add = $first - $second;
+  return $add;
+< object
+
+> object multiply perl
+  my $rs = shift @_;
+  my $first = shift @_;
+  my $second = join " ", @_;
+  my $add = $first * $second;
+  return $add;
+< object
+
+> object divide perl
+  my $rs = shift @_;
+  my $first = shift @_;
+  my $second = join " ", @_;
+  my $add = $first / $second;
+  return $add;
+< object
+
++ [*] # plus # [*]
+- Thats easy, <star1> ߙ <star2> is <call>plus <star1> <star2></call>
+
++ [*] # times # [*]
+- Thats easy, <star1> * <star2> is <call>multiply <star1> <star2></call>
+
++ [*] # minus # [*]
+- Thats easy, <star1> - <star2> is <call>subtract <star1> <star2></call>
+
++ [*] # divided # [*]
+- Thats easy, <star1> / <star2> is <call>divide <star1> <star2></call>
+
++ mathanswer
+- Thats easy, it is <get answer>
