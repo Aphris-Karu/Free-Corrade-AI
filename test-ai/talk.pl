@@ -1,18 +1,11 @@
 #!/usr/bin/perl -w
 use strict;
-my $Version = "2.3.4";
+my $Version = "2.3.5";
 my $I = 0;
 use lib '/usr/local/lib/perl5/site_perl/5.20.3';
-#use Net::MQTT::Simple;
 use RiveScript;
-#my $MQTT=$ENV{'MQTT_SERVER'} || "mqtt";
-#my $MQTT_TOPIC_INPUT=$ENV{'MQTT_TOPIC_IN'} || "ai/input";
-#my $MQTT_TOPIC_OUTPUT=$ENV{'MQTT_TOPIC_OUT'} || "ai/output";
 
-print STDERR "Sex Bot AI V$Version Started\n";
-#print STDERR "Server: $MQTT\n";
-#print STDERR "Input Topic: $MQTT_TOPIC_INPUT\n";
-#print STDERR "Output Topic: $MQTT_TOPIC_OUTPUT\n";
+print STDERR "Bot AI V$Version Started\n";
 
 # Create a new RiveScript interpreter.
 my $rs = new RiveScript;
@@ -23,15 +16,20 @@ $rs->loadDirectory ("./brain");
 # Sort all the loaded replies.
 $rs->sortReplies;
 
-#my $mqtt = Net::MQTT::Simple->new($MQTT);
-
-#$mqtt->login("bot-ai"); 
-
 while ( $I == 0 ) {
 print ">: ";
 my $message = <STDIN>;
 chomp $message;
-$message = "SecondLife Resident: $message";
-        #print "MESSAGE: $message\n";
-        my $reply = $rs->reply ('localuser',$message);
+$message = "Secondlife Resident: $message";
+        print "MESSAGE: $message\n";
+        my ($user, $msg) = split(/:/, $message, 2);
+        my @name = split / /, $user;
+        print "User: $name[0]\n";
+        $message =~ s/\+/ \+ / if $message =~ /[0-9]/;
+        $message =~ s/\*/ \* / if $message =~ /[0-9]/;
+        $message =~ s/\-/ \- / if $message =~ /[0-9]/;
+        $message =~ s/\// \/ / if $message =~ /[0-9]/;
+        my $reply = $rs->reply ($name[0],$msg);
         print "AI: $reply\n";
+
+
