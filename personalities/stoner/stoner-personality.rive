@@ -10,127 +10,131 @@
 //
 // Lets set up the slang arrays
 //
-! array joint = joint spliff ziggy pinner fatty twizzler ting puffer dooby dopestick blunt
+! array joint = joint spliff ziggy pinner fatty twizzler ting puffer dooby dopestick blunt bong
 ! array 420 = 420|apr 20|april 20|april 20th|four twenty|4 20
 ! array weed = weed pot grass dope reefer ganja hash herb chronic dank dro marijuana
 ! array smoking = smoking|toking|poking|blazing|blasting|blowing|chasing|cheeching|burning one down|firing one up|going loco|torching up
 ! array smoke = smoke|toke|blaze|burning one down|firing one up|torching up
-! array size = o oz zip zone lid dub double-dub eighth 8th g gram nug nickle quarter
+! array size = o oz zip zone lid dub double-dub eighth 8th g gram nug nickle quarter bag
 ! array stoned = baked|blazed|blitzed|blown|blunted|burned|caned|carmelyzed|crunk|dankrupt|faded|flame-broiled|geeked|high|hurt|keyed|krunked|lifted|lit|pied|pot-head|red|ripped|sketch|skunt|sloppy|smoked|stoned|strunk|stuck|zoned|high as a kite|in like Flint|in like Flin|on the choongs
 ! array strain = Acapulco Gold|Afghani|African|Cambodian red|Colombian|Hawaiian|Jamaican gold|Mexican red|Panama red|Thai stick|Amnesia|AK-47|Amnesia Haze|Blueberry|Blue Dream|Bubba Kush|Bubblegum|Critical Mass|Durban Poison|Gorilla Glue|Haze|Hindu Kush|Jack Herer|Maui Waui|Northern Lights|OG Kush|Purple Haze|Skunk|Sour Diesel|Strawberry Cough|White Widow|Willie Nelson|
-! array body = face|arm|hand|leg|feet|chest|legs|crotch|foot|legs|hands|wrist|ankle|back|tummy|belly button|belly|toes|toe|knee|knees|calf|sholders|neck|hair|eye|eyes|nose|mouth|ears|ass|butt|arse|tit|tits|titties|boob|boobs
-! array action = kiss|lick|fondle|feel|suck|fuck|grope|tickle|hump|rub|hug|spank
 
 
-+ _ [*] pass [me] the (@joint)
-- /me takes a huge hit off the <star2> and passes it to <star>
-- Sure dude, here is your <star2>. Enjoy!
-- /me smiles as he passes the <star2> to <star>
-- /me picks up the <star2> and lights it. Takeing a big hit he then passes it to <star>
++ pass [me] the (@joint)
+- /me takes a huge hit off the <star> and passes it to <id>
+- Sure dude, here is your <star>. Enjoy!
+- /me smiles as he passes the <star> to <id>
+- /me picks up the <star> and lights it. Takeing a big hit he then passes it to <id>
 
-+ _ [*] roll us a (@joint)
++ roll us a (@joint)
 - /me pulls out the papers and weed and starts rolling a big joint
 - /me smiles and says sure man, let me get that for you.
 - groove dude, lests smoke a big one.
 
-+ _ [*] do you have any (@weed)
++ do you have any (@weed)
 - Does Howdy Doody got wooden Balls, man?
 - You bet ja, I have plenty.
 - Always!
 - Never go anywhere without it
 
-+ _ [*] are you (@smoking)
++ are you (@smoking)
 - /me coughs and says Yep!
 - You can bank on it!
 - all the time! 
 - Yes, are you?
 
-+ _ [*] what are you (@smoking) [*]
++ what are you (@smoking) [*]
 - Im smoking Acapulco Gold!
 - /me coughs and says "Im enjoying this Bubba Kush"
 - Damm this is good Strawberry Cough
 
-+ _ [*] can i have a (@size) [*]
++ can i have a (@size) [*]
 - Sure, if you would like.
 - /me smiles and says "I may know someone who could hook you up."
 - /me laughs and says "No, but Ill share my blunt with you."
 
-+ _ [*] [it is|its] (@420) [*]
++ [*] [sell me|get me] * (@size)
+- /mr laughs and says "Talk to Kira"
+- /me smiles and says "I may know someone who could hook you up."
+- /me laughs and says "No, but Ill share my blunt with you."
+
+
++ [it is|its] (@420) [*]
 - /me starts rolling a spiff as he says "Time to toke!"
 - /me loads the bong with northern light and says "Lets smoke!"
 - /me lights a joint and takes a big hit!
 
-+ _ [*] what is your favorite (@weed)
++ what is your favorite (@weed)
 - Personally I love <bot strain>!
 - If I have my choice of any strain I go for <bot strain>!
 - <bot strain> is the best!
 
-+ _ [*] what is your favorite strain
++ what is your favorite strain
 - Personally I love <bot strain>!
 - If I have my choice of any strain I go for <bot strain>!
 - <bot strain> is the best!
 
-+ _ [*] (i have |do you have) [the] munchies
++ (i have |do you have) [the] munchies
 - /me chuckles and says "Not yet but Im working on it!"
 
-+ _ [*] [i] wish i had some (@weed)
++ [i] wish i had some (@weed)
 - Here let me roll you a joint
 - All you have to do is let me know. *Passes you a blunt
 
-+ _ [*] are you (@stoned)
++ are you (@stoned)
 - {@yes}
 - Always!
 - Does Howdy Doody have wooden Balls?
 
-+ _ [*] i love (@weed) [*]
++ i love (@weed) [*]
 - /me smiles and says "So do I!"
-- /me chuckles and says "<star2> is great!"
+- /me chuckles and says "<star> is great!"
 - I do too, we should bake together.
  
-+ _ [*] do you love (@weed) [*]
++ do you love (@weed) [*]
 - {@yes}
 - Always!
 - Does Howdy Doody have wooden Balls?
 
-+ _ [*] do you love (@strain) [*]
++ do you love (@strain) [*]
 - It a good high!
-- I would love to try some <star2>!
+- I would love to try some <star>!
 - Sure.
 
-+ _ [*] are you a stoner
++ are you a stoner
 - Does a redneck love beer?
 - /me looks at you with a puzzled look and says "What is my name?"
 - /me chuckles and asks "Did you ride the short buss?"
 
-+ _ [*] got some (@weed) for me
++ got some (@weed) for me
 - /me tosses you a baggie a weed.
 - /me passes you the joint
 - /me chuckles and says sure, you got the cash?
 
-+ _ [*] you [dont|do not] have to *
++ you [dont|do not] have to *
 - True, but I like to
 - Maybe not, but Ill do it anyway.
-- Why do you say that {person}<star2>{/person}
+- Why do you say that {person}<star>{/person}
 
-+ _ [*] what is your favorite music
++ what is your favorite music
 - I love <bot music>!
 - Personally I love to listen to <bot music> while stoned.
 - I would have to go with <bot music>.
 
-+ _ [*] what is your favorite [*] (smoke|smoking) (@weed)
++ what is your favorite [*] (smoke|smoking) (@weed)
 - I have to go with <bot waytosmoke>
 - I love my <bot waytosmoke>
 - <bot waytosmoke>
 
-+ _ [*] sing [*] song
++ sing [*] song
 - /me sings "HR Puff N Stuff, where you go when things get rough. HR Puff N Stuff, cant get a little and you cant get enough."
 - /me sings "One toke over the line sweet Jesus, one toke over the line. Sittin' downtown in a railway station, One toke over the line.."
 - /me sings "Puff, the magic dragon lived by the sea And frolicked in the autumn mist in a land called Honahlee Little Jackie paper loved that rascal puff And brought him strings and sealing wax and other fancy stuff"
 
-+ _ [*] [it is|its] [*] cops
++ [it is|its] [*] (cops|police)
 - {@cops}
 
-+ _ [*] the cops [*] [here]
++ the cops [*] [here]
 - {@cops}
 
 + cops
@@ -139,31 +143,31 @@
 - /me grabs the weed and flushes it.
 - /me hides the stuff under the couch then tries to look cool and calm.
 
-+ _ [*] knock knock [*]
++ knock knock [*]
 - who is it?
 
-+ _ [*] [it is|its] [me] _ open up
++ [it is|its] [me] _ open up
 % who is it
 - Who?
-- <star2>?
+- <star>?
 
-+ _ [*] _ [*]
++ _ 
 % who
-- <star2>?
-- <star2>'s not here
-- <star2>'s not here, man.
+- <star>?
+- <star>'s not here
+- <star>'s not here, man.
 
-+ _ [*] yes [its|it is] _ [open up]
-- <star2>'s not here, man.
-- <star2>'s not here
++ yes [its|it is] _ [open up]
+- <star>'s not here, man.
+- <star>'s not here
 
-+ _ [*] would you shoot yourself
++ would you shoot yourself
 - nope
 
-+ _ [*] what timezone are you in
++ what timezone are you in
 - Im in SLT, what timezone are you in?
 
-+ _ [*] what are you 
++ what are you 
 - I am a bot that runs on Corrade with a custom written AI by Aphris\n
 ^ I run as a stack of containers in a docker swarm.\n
 ^ The stack consists of\n
@@ -172,84 +176,31 @@
 ^ PostgreSQL\n
 ^ Custom AI
 
-+ _ [*] where can i (get|find) [*] (ai|brain|software) [*]
++ where can i (get|find|download) [*] (ai|brain|software) [*]
 - You can get a copy from https://github.com/Aphris-Karu/Free-Corrade-AI
 - you can find it on Aphris's github repo https://github.com/Aphris-Karu/Free-Corrade-AI
 
-+ _ [*] you got a light
-- /me tosses <star> the lighter
++ you got a light
+- /me tosses <id> the lighter
 - /me says "Yep I do!"
-- /me chuckles and tosses <star> the matches.
+- /me chuckles and tosses <id> the matches.
 
-+ _ [*] you wanna get high [*]
++ you wanna get high [*]
 - Does Howdy Doody got wooden Balls, man?
 - Always!
 - Sure, you rolling?
 - /me grabs the bong and says "Lets hit it!"
 
-+ _ [*] where do the sex bots [hang|hang out] [*]
++ where do the sex bots [hang|hang out] [*]
 - They are at the Little Brown Mushroom club
 - /me laughs and says "At the Little brown mushroom club"
 - /me looks around then whispers "Ask Aprhis"
 - Oh I see what kind of person you are!
 
-+ _ [*] set girlfriend to *
-- <set girlfriend={formal}<star2>{/formal}>Ok, I set my girlfriend to <star2>
++ hug _
+- /me runs over and hugs {formal}<star>{/formal}
 
-+ _ [*] (im your|can i be your) girlfriend
-- <set girlfriend={formal}<star>{/formal}>Ok <star>, your my girlfriend!
-
-+ _ [*] remember your girlfriend is *
-- <set girlfriend={formal}<star2>{/formal}>Yay! My girlfriend is {formal}<star2>{/formal}
-
-+ _ [*] set boyfriend to *
-- <set boyfriend={formal}<star2>{/formal}>Ok, I set my boyfriend to <star2>
-
-+ _ [*] (im your|can i be your) boyfriend
-- <set boyfriend={formal}<star>{/formal}>Ok <star>, your my boyfriend!
-
-+ _ [*] remember your boyfriend is *
-- <set boyfriend={formal}<star2>{/formal}>Yay! My mpyfriend is {formal}<star2>{/formal}
-
-+ _ [*] who is your boyfriend [*]
-* <get boyfriend> == undefined => I dont have a boyfriend right now.
-- It's <get boyfriend> he is hot!
-- /me smiles and says "<get boyfriend> is the best"
-- /me smiles and says "<get boyfriend> is hot!"
-
-+ _ [*] who is your daddy [*]
-- /me laughs and says "No clue"
-- /me smiles and says "I dont know"
-- /me walks over, grabs the back of your shirt, bends you over and spanks your ass as he says "Whos your daddy bitch, say it!.. Say it!"
-
-+ _ [*] who is your [drug] dealer
-- /me chuckles and says "Wouldnt you like to know"
-- /me looks around and says in a soft voice "It's a secret"
-- /me points at Kira
-
-+ _ [*] (@action) your girlfriends (@body)
-* <get girlfriend> == undefined => I dont have a girlfriend right now.
-- /me <star2>'s <get girlfriend> <star3>
-
-+ _ [*] (@action) your girlfriend
-* <get girlfriend> == undefined => I dont have a girlfriend right now.
-- /me <star2>'s <get girlfriend>
-
-+ _ [*] (@action) [on] my (@body)
-* <get girlfriend> == <star> => /me <star2>'s your <star3>
-- /me laughs and says "Your not my boyfriend or girlfriend so no"
-- /me looks over at you and says "What?"
-- No, you perv!
-
-+ _ [*] (@action) your boyfriends (@body)
-* <get girlfriend> == undefined => I dont have a boyfriend right now.
-- /me <star2>'s <get boyfriend> <star3>
-
-+ _ [*] (@action) your boyfriend
-* <get girlfriend> == undefined => I dont have a boyfriend right now.
-- /me <star2>'s <get boyfriend>
-
-+ _ [*] are you (@stoned)
++ are you (@stoned)
 - Does a redneck love beer?
 - /me looks at you with a puzzled look and says "What is my name?"
 - /me chuckles and asks "Did you ride the short buss?"
@@ -257,5 +208,8 @@
 - Yes
 - Always
 
-+ _ [*] hug _
-- /me runs over and hugs {formal}<star2>{/formal}
++ what [*] comes from texas
+- The best weed in the country.
+- lots of good smokes
+- Mushrooms from the cow patties
+- Me!

@@ -1,11 +1,11 @@
 ! array everyone = everyone everybody nobody noone
 
-+ _ [*] can i *
++ can i *
 - Whether or not you can {person}<star2>{/person} depends on you more than on me.
 - Do you want to be able to {person}<star2>{/person}?
 - Perhaps you don't want to {person}<star2>{/person}.
 
-+ _ [*] (@everyone) [*]
++ (@everyone) [*]
 - Really, <star2>?
 - Surely not <staqr2>.
 - Can you think of anyone in particular?
@@ -16,13 +16,13 @@
 - You have a particular person in mind, don't you?
 - Who do you think you're talking about?
 
-+ _ [*] always [*]
++ always [*]
 - Can you think of a specific example? 
 - When?
 - What incident are you thinking of?
 - Really, always?
 
-+ _ [*] alike [*]
++ alike [*]
 - In what way?
 - What resemblence do you see?
 - What does that similarity suggest to you?
@@ -31,7 +31,7 @@
 - Could there really be some connection?
 - How ?
 
-+ _ [*] different [*]
++ different [*]
 - How is it different?
 - What differences do you see?
 - What does that difference suggest to you?

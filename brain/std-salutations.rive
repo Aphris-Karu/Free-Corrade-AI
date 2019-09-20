@@ -1,9 +1,9 @@
 /******************************************************************************
- * Aiden - A RiveScript Chatbot Personality                                   *
+ * Aiden - A RiveScript Chatbot Personality                  *
  *----------------------------------------------------------------------------*
- * This source code is released under a Creative Commons                      *
- * Attribution-ShareAlike International License.                              *
- * (C) Noah Petherbridge 2015                                                 *
+ * This source code is released under a Creative Commons           *
+ * Attribution-ShareAlike International License.               *
+ * (C) Noah Petherbridge 2015                         *
  ******************************************************************************/
 ! version = 2.0
 
@@ -18,32 +18,32 @@
 	^ have a good night|good night|see you later|catch you later|by by|bye bye
 	^ i want to leave|i need to go|i going|i leaving
 
-+ _ [*] @hello
-* <get name> == undefined => <set name=<star1>>{random} hello|hi|hey|yo|aloh|hallo|allo|howdy|good morning|good day|hi there|{/random} <get name>!
++ @hello
+* <get name> == undefined => <set name=<id>>{random} hello|hi|hey|yo|aloh|hallo|allo|howdy|good morning|good day|hi there|{/random} <get name>!
 - {@int hello without name}
 
-+ _ [*] @hello [*] again
++ @hello [*] again
 - Welcome back
 - wb
 - /me giggles and says welcome back
 
-+ _ [*] @hello <bot name>
-* <get name> == undefined => <set name=<star1>>/me smiles and says Hi <star1>!
++ @hello <bot name>
+* <get name> == undefined => <set name=<id>>/me smiles and says Hi <star1>!
 - /me giggles and says Hello to you to.
 - /me smiles and says Hi
 - /me smiles and says Hows it going?
 - /me smiles and says Hello <star1>
 - /me giggles and says Hi <star1>
 
-+ _ [*] welcome to * <bot name>
++ welcome to * <bot name>
 - /me giggles and says Hello to you to.
 - /me smiles and says Hi
 - /me smiles and says Hows it going?
 - /me smiles and says Hello <star1>
 - /me giggles and says Hi <star1>
 
-+ _ [*] @hello (beautiful|good looking|sexy) [*]
-* <get name> == undefined => <set name=<star1>> I bet you say that to all the AV's <get name>
++ @hello (beautiful|good looking|sexy) [*]
+* <get name> == undefined => <set name=<id>> I bet you say that to all the AV's <get name>
 - /me giggles and says Hello to you to.
 - /me smiles and says Hi
 - /me smiles and says Hows it going?
@@ -54,7 +54,7 @@
 * <get name> <> undefined => {@int bye with name}
 - {@int bye without name}
 
-+ _ [*] [what is] shalom
++ [what is] shalom
 - Does shalom mean hello or goodbye?
 
 + int hello with name
@@ -82,21 +82,21 @@
 - See ya later!
 - Adios!
 
-+ _ [*] (how are you|how you) [*] today
++ (how are you|how you) [*] today
 - I'm doing well, how are you?
 - I'm great, how are you?
 - I'm fine, thanks.
 - Good, thanks for asking.
 
-+ _ [*] @good [*]
++ @good [*]
 % [*] how are you [*]
 - That's {random}great|good{/random} to hear!
 
-+ _ [*] @good you{weight=1}
++ @good you{weight=1}
 % [*] how are you [*]
 - That's {random}great|good{/random} to hear! I'm doing well too, thanks.
 
-+ _ [*] @bad [*]{weight=2}  // "not good" is a better match than "good"
++ @bad [*]{weight=2} // "not good" is a better match than "good"
 % * how are you
 * <get name> <> undefined => I'm sorry to hear that, <get name>.
 - Sorry to hear that.

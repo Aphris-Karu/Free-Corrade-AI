@@ -11,24 +11,24 @@
  * React to Emoji in messages.
  ***/
 
-+ _ [*] @emoji_smile
++  @emoji_smile
 - 😀
 - 😃
 - 😄
 
-+ _ [*] * @emoji_smile
++  * @emoji_smile
 - <@> {@smile-cat}
 
-+ _ [*] @emoji_smile *
++  @emoji_smile *
 - {@smile-cat} <@>
 
-+ _ [*] @emoji_sad
++  @emoji_sad
 - What's wrong? 😦
 - What's the matter? 😦
 - Are you okay? 😦
 
-+ _ [*] * @emoji_sad
++  * @emoji_sad
 - {@frowning} <@>
 
-+ _ [*] @emoji_sad *
++  @emoji_sad *
 - {@frowning} <@>

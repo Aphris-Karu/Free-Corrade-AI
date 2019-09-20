@@ -25,13 +25,6 @@ it should be
 
 SLFIRST SLLAST: Message
 
-Thus all Rive script entries should start with
-
-\+ _ [*]
-
-Where the first _ is the users name and the [*] is there as old accounts will have a last name and new ones will not.
-
-
 ## Docker
 
 The docker container will take the environment variable of "MQTT_SERVER" to set the MQTT server that it communicates to

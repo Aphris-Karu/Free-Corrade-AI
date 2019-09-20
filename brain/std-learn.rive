@@ -21,10 +21,6 @@
 + ask me [*] about myself|ask me [*] personal question
 @ int ask user variable
 
-+ (@first_names) [*]
-% [*] what is your name
-@ my name is <star>
-
 + #
 % [*] how old are you
 @ i am <star> years old

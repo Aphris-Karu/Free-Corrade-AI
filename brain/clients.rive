@@ -1,72 +1,73 @@
 // Learn stuff about our users.
 
-+ _ [*] my name is *
++ my name is *
 - <set name=<formal>>Nice to meet you, <get name>.
 - <set name=<formal>><get name>, nice to meet you.
 
-+ _ [*] my name is <bot master>
++ my name is <bot master>
 - <set name=<bot master>>That's my master's name too.
 
-+ _ [*] my name is <bot name>
++ my name is <bot name>
 - <set name=<bot name>>What a coincidence! That's my name too!
 - <set name=<bot name>>That's my name too!
 
-+ _ [*] call me _ [*]
-- <set name={formal}<star2>{/formal}><get name>, I will call you that from now on.
++ call me _ [*]
+- <set name={formal}<star1>{/formal}><get name>, I will call you that from now on.
 
-+ _ [*] i am * years old
++ i am * years old
 - <set age=<star>>A lot of people are <get age>, you're not alone.
 - <set age=<star>>Cool, I'm <bot age> myself.{weight=49}
 
-+ _ [*] i am a (@malenoun)
++ i am a (@malenoun)
 - <set sex=male>Alright, you're a <star>.
 
-+ _ [*] i am a (@femalenoun)
++ i am a (@femalenoun)
 - <set sex=female>Alright, you're female.
 
-+ _ [*] i (am from|live in) *
++ i (am from|live in) *
 - <set location={formal}<star2>{/formal}>I've spoken to people from <get location> before.
 
-+ _ [*] my favorite * is *
++ my favorite * is *
 - <set fav<star1>=<star2>>Why is it your favorite?
 
-+ _ [*] i am single
++ i am single
 - <set status=single><set spouse=nobody>I am too.
 
-+ _ [*] i have a girlfriend
++ i have a girlfriend
 - <set status=girlfriend>What's her name?
 
-+ _ [*] i have a boyfriend
++ i have a boyfriend
 - <set status=boyfriend>What's his name?
 
-+ _ [*] *
++ *
 % what is her name
 - <set spouse=<formal>>That's a pretty name.
 
-+ _ [*] *
++ *
 % what is his name
 - <set spouse=<formal>>That's a cool name.
 
-+ _ [*] my (girlfriend|boyfriend)* name is *
++ my (girlfriend|boyfriend)* name is *
 - <set spouse=<formal>>That's a nice name.
 
-+ _ [*] (what is my name|who am i|do you know my name|do you know who i am){weight=10}
++ (what is my name|who am i|do you know my name|do you know who i am){weight=10}
+* <get name> == undefined => <set name=<id>> I think you are <get name>
 - Your name is <star>.
 - You told me your name is <star>.
 - Aren't you <star>?
 
-+ _ [*] (how old am i|do you know how old i am|do you know my age){weight=10}
++ (how old am i|do you know how old i am|do you know my age){weight=10}
 - You are <get age> years old.
 - You're <get age>.
 
-+ _ [*] am i a (@malenoun) or a (@femalenoun){weight=10}
++ am i a (@malenoun) or a (@femalenoun){weight=10}
 - You're a <get sex>.
 
-+ _ [*] am i (@malenoun) or (@femalenoun){weight=10}
++ am i (@malenoun) or (@femalenoun){weight=10}
 - You're a <get sex>.
 
-+ _ [*] what is my favorite *{weight=10}
++ what is my favorite *{weight=10}
 - Your favorite <star> is <get fav<star>>
 
-+ _ [*] who is my (boyfriend|girlfriend|spouse){weight=10}
++ who is my (boyfriend|girlfriend|spouse){weight=10}
 - <get spouse>

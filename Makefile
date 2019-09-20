@@ -1,4 +1,4 @@
-VERSION=2.2.3
+VERSION=2.3.5
 REGISTRY=192.168.1.222:5000
 all:
 	# Only available as a public build

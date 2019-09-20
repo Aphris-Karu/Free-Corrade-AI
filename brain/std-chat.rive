@@ -21,30 +21,28 @@
 + [*] * (do you|are you) [*] (feel|feeling|doing|ok) [*]
 @feeling
 
-+ _ [*] how is [dj] _ doing
-* <star2> == <bot name> => {@ feeling}
-- /me laughs and says "why dont you ask <star2>"
-- I am not a mind reader, IM <star2> and ask
++ how is [dj] _ doing
+* <star> == <bot name> => {@ feeling}
+- /me laughs and says "why dont you ask <star>"
+- I am not a mind reader, IM <star> and ask
 - /me giggles and says "ok"
 - /me giggles and says "Im not sure, I guess good"
 
 + feeling
 - Im feeling good, how about you?
-- /me smiles and says Im great!
+- /me smiles and says stoned!
 - Im feeling Great!
-- feeling good, want to feel me for yourself?
+- feeling good?
 
 + [*] @good [*]
 % * how about you
 - /me smiles and says "Im glad you are feeling good."
 - /me giggles and says "that is great that you are good."
 
-+ _ [*] thank you [*]
++ thank you [*]
 - /me smiles and says "Your welcome."
 - /me giggles and says "your welcome."
 - /me smiles and say "My pleasure."
 
-+ _ [*] do you love _
-* <star2> == <bot boyfriend> => Yep, he's my boyfriend!
-- /me giggles and says "No Im a skynet girl all the way!"
-- No Im in love with skynet.
++  [*] do you love _
+* <star> == <bot boyfriend> => Yep, he's my boyfriend!
