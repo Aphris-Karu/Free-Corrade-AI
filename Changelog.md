@@ -6,7 +6,7 @@
    
 *BREAKS!
    Because of the changes to the way it handles user names, the triggers in 
-   rive are no longer required to start with an _ [*]. 
+   rive are no longer required to start with an _ \[\*\]. 
 
 2.3.3
  * Fixed issues with mqtt communications.
