@@ -3,7 +3,8 @@
  * Fixes issue with bot not being able to do math.
  * bot now properly sets up a table in memory for each user it speaks with
    keeping the user vars separate.
- BREAKS!
+   
+- BREAKS!
    Because of the changes to the way it handles user names, the triggers in 
    rive are no longer required to start with an _ [*]. 
 
