@@ -66,7 +66,9 @@ This will list all the running containers as well as there "CONTAINER ID" Find a
 
 To restart the service and make it reload the scripts. you will do the following command replacing <CONTAINER ID> With the ID you copied.
 
-`docker container restart <CONTAINER ID>`
+`docker container stop <CONTAINER ID>`
+
+Decause we are running in a stack, docker will see the container stop and start a new copy for you.
 
 To see a realtime output of the stacks CPU/MEM/ and NET usage you can use the command
 
