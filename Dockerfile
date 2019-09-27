@@ -6,6 +6,8 @@ RUN cpanm install DBD::Pg
 RUN mkdir /usr/src/app
 RUN rm -fr root/.cpanm
 
+RUN apt-get update && apt-get install -y wget unzip procps nano
+
 WORKDIR /usr/src/app
 
 VOLUME ["/usr/src/app/brain"]
