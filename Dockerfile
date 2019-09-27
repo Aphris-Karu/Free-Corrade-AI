@@ -8,6 +8,8 @@ RUN rm -fr root/.cpanm
 
 WORKDIR /usr/src/app
 
+VOLUME ["/usr/src/app/brain"]
+
 COPY bot-ai.pl /usr/src/app
 
 CMD [ "perl", "./bot-ai.pl" ]
