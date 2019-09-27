@@ -10,9 +10,19 @@ Next you will need a configured corrade container.
 
 Follow Steps 1-7 at https://cloud.docker.com/repository/docker/aphris/corrade-continuous
 
-Now that you have the configs in a directory and know the location. You can create your docker-compose.yml
+Now that you have the configs in a directory and know the location. 
 
-We will be setting up 3 services. (corrade/mtqq/corrade-ai) you will need a location with a config for the mqtt server and a folder location for the brain used by the corrade-ai.
+We will be setting up 3 services. (corrade/mtqq/corrade-ai) you will need a location with a config for the mqtt server as well as a data directory and a folder location for the brain used by the corrade-ai.
+
+The easiest way to do this is to do the following commands on linux
+
+```
+mkdir /opt/corrade
+mkdir /opt/corrade/brain
+mkdir /opt/corrade/mqtt-data
+```
+
+Now you can create your docker-compose.yml
 
 ```
 version: "3"
