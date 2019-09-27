@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 
 VOLUME ["/usr/src/app/brain"]
 
-ADD https://github.com/Aphris-Karu/Free-Corrade-AI/archive/master.zip
+ADD https://github.com/Aphris-Karu/Free-Corrade-AI/archive/master.zip .
 
 COPY start.sh /usr/src/app
 RUN chmod 755 /usr/src/app/start.sh
