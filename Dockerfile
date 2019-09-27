@@ -13,7 +13,7 @@ VOLUME ["/usr/src/app/brain"]
 ADD https://github.com/Aphris-Karu/Free-Corrade-AI/archive/master.zip
 
 COPY start.sh /usr/src/app
-CMD chmod 755 /usr/src/app/start.sh
+RUN chmod 755 /usr/src/app/start.sh
 
 COPY bot-ai.pl /usr/src/app
 
