@@ -8,6 +8,6 @@ RUN rm -fr root/.cpanm
 
 WORKDIR /usr/src/app
 
-COPY . /usr/src/app
+COPY bot-ai.pl /usr/src/app
 
 CMD [ "perl", "./bot-ai.pl" ]
