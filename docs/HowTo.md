@@ -40,7 +40,7 @@ services:
     volumes:
       - /opt/corrade/mosquitto.conf:/mosquitto/config/mosquitto.conf
       - /opt/corrade/mqtt-data:/mosquitto/data
-corrade-ai:
+  corrade-ai:
     image: aphris/corrade-free-ai:latest
     environment:
       MQTT_SERVER: mqtt
@@ -50,4 +50,6 @@ corrade-ai:
         - mqtt
 ```
 
+After saving that file, you can bring up the stack of services with the following command
 
+`docker stack deploy corrade --compose-file=docker-compose.yml`
