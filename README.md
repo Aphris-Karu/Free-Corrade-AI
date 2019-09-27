@@ -1,6 +1,7 @@
 # This is the FREE AI for Corrade 
 Note: this is a beta version that I am still working on!
 
+If you are wanting to run this on a bot, there is a HowTo located https://github.com/Aphris-Karu/Free-Corrade-AI/blob/master/docs/HowTo.md
 
 It is based on Rivescript and written using the Perl RiveScript Plugin.
 
