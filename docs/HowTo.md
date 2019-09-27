@@ -40,7 +40,7 @@ services:
       - /opt/corrade/mosquitto.conf:/mosquitto/config/mosquitto.conf
       - /opt/corrade/mqtt-data:/mosquitto/data
 corrade-ai:
-    image: phris/corrade-free-ai:latest
+    image: aphris/corrade-free-ai:latest
     environment:
       MQTT_SERVER: mqtt
     volumes:
