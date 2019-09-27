@@ -6,10 +6,6 @@ When setting up the AI you will need docker set up in swarm mode. This can be do
 
 `docker swarm init`
 
-
-
-Now that you have the configs in a directory and know the location. 
-
 We will be setting up 3 services. (corrade/mtqq/corrade-ai) you will need a location with a config for the mqtt server as well as a data directory and a folder location for the brain used by the corrade-ai.
 
 The easiest way to do this is to do the following commands on linux
