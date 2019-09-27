@@ -32,19 +32,19 @@ services:
     ports:
      - "80:54377"
     volumes:
-     - (Put the full path to)/Configuration.xml:/corrade/Configuration.xml
-     - (Put the full path to)/Nucleus.config:/corrade/Nucleus.config
+     - /opt/corrade/Configuration.xml:/corrade/Configuration.xml
+     - /opt/corrade/Nucleus.config:/corrade/Nucleus.config
   mqtt:
     image: eclipse-mosquitto
     volumes:
-      - (Put the full path to)/mosquitto.conf:/mosquitto/config/mosquitto.conf
-      - mqtt-data:/mosquitto/data
+      - /opt/corrade/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - /opt/corrade/mqtt-data:/mosquitto/data
 corrade-ai:
     image: phris/corrade-free-ai:latest
     environment:
       MQTT_SERVER: mqtt
     volumes:
-      - (Put the full path to)/brain:/usr/src/app/brain
+      - /opt/corrade/brain:/usr/src/app/brain
     depends_on:
         - mqtt
 ```
