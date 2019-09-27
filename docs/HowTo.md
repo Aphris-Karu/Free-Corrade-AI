@@ -21,8 +21,9 @@ mkdir /opt/corrade
 mkdir /opt/corrade/brain
 mkdir /opt/corrade/mqtt-data
 ```
+I have included a mosquitto.conf in the /docs or you can view it at https://github.com/Aphris-Karu/Free-Corrade-AI/blob/master/docs/mosquitto.conf
 
-Now you can create your docker-compose.yml
+Now you can create your docker-compose.yml by copying the below into it.
 
 ```
 version: "3"
