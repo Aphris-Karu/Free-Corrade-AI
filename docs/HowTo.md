@@ -55,3 +55,23 @@ services:
 After saving that file, you can bring up the stack of services with the following command
 
 `docker stack deploy corrade --compose-file=docker-compose.yml`
+
+The AI will check the /brain directory and if it is empty it will deploy the base set of rivescript files. You will want to add a personality from this repo or build a custom personality. When you are ready to load the personality you will need to restart the ai service. To do that you will need to do the following
+
+start by listing the containers currently running
+
+`docker container ls`
+
+This will list all the running containers as well as there "CONTAINER ID" Find aphris/corrade-free-ai in the list and copy the "CONTAINER ID" 
+
+To restart the service and make it reload the scripts. you will do the following command replacing <CONTAINER ID> With the ID you copied.
+
+`docker container restart <CONTAINER ID>`
+
+To see a realtime output of the stacks CPU/MEM/ and NET usage you can use the command
+
+`docker container stats`
+
+To stop your stack you can use the command
+
+`docker stack rm corrade`
